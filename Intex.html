@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>1996 U.S TaxEstimator Demo</title>
+	<meta charset="UTF-8">
+    <meta name="description" content="1996 U.S TaxEstimator Demo ">
+    <meta name="keywords" content="JavaScript Testing">
+    <meta name="author" content="Abin O Varghese">   
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<main>
+		<header>
+			<h1>1996 U.S. Federal Income Tax Estimator</h1>
+			<p>To computr your 1996 U.S. Federal Income Tax,follow the steps ith the table below. You only need to enter the data in the boldface fields. Javascript will perform all the necessory computations for you</p>
+			<p><em>This program is an example only.computing your actual income tax is almost always more complicated than this!</em></p>
+		</header>
+	<body>
+        <table style="width:500px;">
+             <tr>
+                <td></td>
+   			    <td colspan="2" bgcolor="#d0d0d0"><b>Select your filing status:<b>
+   			     <select id="select" onclick="start();calc()">
+               <option id="op1" value="single">Single</option>
+ 							 <option id="op2" value="headofhousehold">Head of Household</option>
+ 							 <option id="op3" value="marriedfilingjointly">Married filling Jointly</option>
+  						 <option id="op4" value="marriedfilingseparately">Married filling Separately</option>
+					   </select>  
+			    </td>
+   			    <td></td>
+ 			 </tr>
+  			 <tr>
+   			    <td>1.</td>
+   			    <td bgcolor="#d0d0d0" width="65%"><b>Enter Your Adjusted Gross Income:<b></td>
+   			    <td bgcolor="#d0d0d0"><input id="amount" type="number"  onfocusout="calc()" value=0></input></td>
+ 			 </tr>
+		    <tr >
+  			    <td>2.</td>
+   			    <td bgcolor="#d0d0d0"><b>Check here<input id="checkbox" type="checkbox" onclick="check();calc()" checked></input> for the sandard deduction, or enter your Itemizes Deduction</b></td>
+    			<td bgcolor="#d0d0d0"><input id="default" type="text" onfocusout="calc()" value=1000 disabled></input></td>
+  			</tr>
+  			<tr>
+  			    <td>3.</td>
+   			    <td>Substract line 2 from line 1</td>
+    			<td><input id="amt3" type="text" value=0></input></td>
+  			</tr>
+  			<tr>
+  			    <td rowspan="2">4.</td>
+   			    <td bgcolor="#d0d0d0"><b>Enter your number of exemptions:<input id="exemtions" type="text" size="2" value=0 onfocusout="calc()"></input><b></td>
+    			<td></td>
+  			</tr>
+  			<tr>
+   			    <td>Multiply number of exemptions by $2,550.</td>
+    			<td><input id="exemvalue" type="text" value=0></input></td>
+  			</tr>
+  			<tr>
+  			    <td>5.</td>
+   			    <td>Substract line 4 from line 3.</td>
+    			<td><input id="amt5" type="text" value=0></input></td>
+  			</tr>
+  			<tr>
+  			    <td>6.</td>
+   			    <td>This is your tax, from 1996 tax rate schedule</td>
+    			<td><input id="total" type="text" value=0></input></td>
+  			</tr>  			
+
+        </table>
+<script src="../js/script.js"></script>
+</body>
+</html>
