@@ -34,11 +34,11 @@ function calc(){
 
 function check(){
 	if(document.getElementById("checkbox").checked){
-	document.getElementById("default").disabled=true;
-    start();
+		document.getElementById("default").disabled=true;
+    	start();
     }
     else
     {
-    document.getElementById("default").disabled=false;
+    	document.getElementById("default").disabled=false;
     }
 }
